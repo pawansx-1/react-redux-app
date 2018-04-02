@@ -25,3 +25,11 @@ class AddCounter extends Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(addCounter, dispatch)
+    }
+}
+
+export default connect(mapDispatchToProps)(AddCounter);
